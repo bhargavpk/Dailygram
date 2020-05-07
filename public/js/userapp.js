@@ -185,7 +185,14 @@ backIcon.addEventListener('click',(e) => {
 });
 
 getAccount = async function(userInp){
-    const res = await fetch('/account_test?username='+userInp);
+    const res = await fetch('/account_test',{
+        method:'POST',
+        headers:{
+            'Accept':'application/json',
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify({username:userInp})
+    });
     const data = await res.json();
     return data;
 }

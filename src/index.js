@@ -167,6 +167,17 @@ app.patch('/patch_post',auth,async (req,res) => {
 }
 })
 
+app.post('/account_test',async (req,res) => {
+    try{
+       const user = await User.findOne({userName:req.body.username});
+       if(user)
+            res.send({status:true});
+        else
+            res.send({status:false});
+    }catch(e){
+        res.send({error:e});
+    }
+})
 app.get('/account',async (req,res) => {
     if(!req.query.username)
         res.render('error');
