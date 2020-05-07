@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+	<title>IIT-BBS Daily</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel = "icon" href =  "/images/logo.png" type = "image/x-icon"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+{{>header_index}}
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form>
+			<h1>Create Account</h1>
+			<span>Use your genuine first and last names</span>
+			
+			
+			<input type="text" class="first-name"  placeholder="First Name" />
+			<input type="text" class="last-name" placeholder="Last Name" />
+			<input type="text" class="user-name" placeholder="User Name" />
+			<input type="email" class="email" placeholder="Email" />
+			<input type="password" class="password" placeholder="Password" />
+			<div class="val-error"><span id="signup-val-error"></span></div>
+			<button id="form-signup">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>Sign In</h1>
+
+			<input type="text"  class="user-name" placeholder="User name" />
+			<input type="password" class="password" placeholder="Password" />
+			<div class="val-error"><span id="signin-val-error"></span></div>
+			<a href="#">Forgot your password?</a>
+			<button id="form-signin">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>First time?</h1>
+				<p>Enter your personal details to join group</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		All Rights are reserved to @ dailyGram 2020
+	</p>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+
+</html>
